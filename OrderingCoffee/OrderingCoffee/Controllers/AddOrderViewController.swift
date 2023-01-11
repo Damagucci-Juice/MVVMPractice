@@ -11,7 +11,7 @@ final class AddOrderViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     private var segmentControl: UISegmentedControl!
-    private var vm = AddCoffetOrderViewModel()
+    private var vm = AddCoffeeOrderViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
