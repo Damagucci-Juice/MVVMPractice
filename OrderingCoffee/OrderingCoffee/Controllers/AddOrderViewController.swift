@@ -28,6 +28,15 @@ final class AddOrderViewController: UIViewController {
         vm.email = email
         vm.selectedSize = selectedSize
         vm.selectedType = vm.types[indexPath.row]
+        
+        WebService().load(resource: Order.create(vm: vm)) { result in
+            switch result {
+            case .success(let order):
+                print(order)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     private func setUP() {

@@ -17,9 +17,7 @@ class OrdersTableViewController: UITableViewController {
     }
     
     private func fetchOrders() {
-        guard let orderUrl = URL(string: "https://warp-wiry-rugby.glitch.me/orders") else { return }
-        let resource = Resource<[Order]>(baseURL: orderUrl)
-        WebService().load(resource: resource) { [unowned self] result in
+        WebService().load(resource: Order.all) { [unowned self] result in
             switch result {
             case .success(let orders):
                 self.orderListViewModel.updateOrderViewModels(orders.map { OrderViewModel(order: $0) })

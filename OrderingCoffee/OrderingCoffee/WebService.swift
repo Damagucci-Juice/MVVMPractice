@@ -10,6 +10,9 @@ import Foundation
 final class WebService {
     func load<T>(resource: Resource<T>, completion: @escaping (Result<T, NetworkError>) -> Void) {
         var urlRequest = URLRequest(url: resource.baseURL)
+        urlRequest.httpMethod = resource.httpMethod.rawValue
+        urlRequest.httpBody = resource.body
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type") 
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             guard let data = data,
                   error == nil,
