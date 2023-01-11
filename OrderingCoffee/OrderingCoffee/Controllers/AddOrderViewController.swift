@@ -10,11 +10,24 @@ import UIKit
 final class AddOrderViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     private var segmentControl: UISegmentedControl!
     private var vm = AddCoffeeOrderViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         setUP()
+    }
+    
+    @IBAction func save() {
+        let name = nameTextField.text
+        let email = emailTextField.text
+        let selectedSize = segmentControl.titleForSegment(at: segmentControl.selectedSegmentIndex)
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        vm.name = name
+        vm.email = email
+        vm.selectedSize = selectedSize
+        vm.selectedType = vm.types[indexPath.row]
     }
     
     private func setUP() {

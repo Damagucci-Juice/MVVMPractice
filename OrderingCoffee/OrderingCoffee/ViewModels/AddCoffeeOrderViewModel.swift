@@ -8,7 +8,7 @@
 import Foundation
 
 struct AddCoffeeOrderViewModel {
-    var neme: String?
+    var name: String?
     var email: String?
     var selectedType: String?
     var selectedSize: String?
