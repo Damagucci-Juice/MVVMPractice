@@ -22,7 +22,11 @@ extension OrderListViewModel {
     
     var count: Int { orderViewModels.count }
     
-    mutating func updateOrderViewModels(_ vm: [OrderViewModel]) {
-        self.orderViewModels = vm
+    mutating func updateOrderViewModels(_ vms: [OrderViewModel]) {
+        self.orderViewModels = vms
+    }
+    
+    mutating func append(_ vm: OrderViewModel) {
+        orderViewModels.append(vm)
     }
 }
