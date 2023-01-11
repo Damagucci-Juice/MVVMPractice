@@ -45,4 +45,25 @@ extension OrdersTableViewController {
         cell.detailTextLabel?.text = vm.size
         return cell
     }
+    
+}
+
+extension OrdersTableViewController: AddCoffeeOrderDelegate {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let naviC = segue.destination as? UINavigationController,
+              let addCoffeeOrderVC = naviC.viewControllers.first as? AddOrderViewController else { return }
+        addCoffeeOrderVC.delegate = self
+    }
+    
+    func addCoffeeOrderViewControllerDidSave(order: Order, controller: UIViewController) {
+        controller.dismiss(animated: true)
+        let orderVM = OrderViewModel(order: order)
+        self.orderListViewModel.append(orderVM)
+        self.tableView.insertRows(at: [IndexPath(row: orderListViewModel.count - 1, section: 0)], with: .automatic)
+    }
+    
+    func addCoffeeOrderViewControllerDidClose(controller: UIViewController) {
+        controller.dismiss(animated: true)
+    }
 }
