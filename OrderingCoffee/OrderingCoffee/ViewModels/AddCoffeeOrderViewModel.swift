@@ -1,5 +1,5 @@
 //
-//  AddCoffetOrderViewModel.swift
+//  AddCoffeeOrderViewModel.swift
 //  OrderingCoffee
 //
 //  Created by YEONGJIN JANG on 2023/01/11.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AddCoffetOrderViewModel {
+struct AddCoffeeOrderViewModel {
     var neme: String?
     var email: String?
     var selectedType: String?
