@@ -1,0 +1,25 @@
+1. Get All Coffee Orders
+
+https://warp-wiry-rugby.glitch.me/orders
+
+Method: GET
+
+
+
+2. Post a New Coffee Order
+
+https://warp-wiry-rugby.glitch.me/orders
+
+Method: POST
+ 
+Body:
+name: String
+email: String
+type: String
+size: String
+
+3. Delete All Coffee Orders
+
+https://warp-wiry-rugby.glitch.me/clear-orders
+
+Method: GET
