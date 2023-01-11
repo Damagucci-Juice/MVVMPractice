@@ -86,14 +86,6 @@
                                     <outlet property="delegate" destination="23t-Wa-uvD" id="aDB-vC-RN0"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-xV-LDh">
-                                <rect key="frame" x="93.666666666666686" y="488" width="206" height="32"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ryo-2p-yK2">
                                 <rect key="frame" x="96.666666666666686" y="572" width="200" height="34"/>
                                 <constraints>
@@ -115,14 +107,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TK4-MD-RQX" firstAttribute="top" secondItem="ryo-2p-yK2" secondAttribute="bottom" constant="26" id="NaS-fQ-HnR"/>
+                            <constraint firstItem="ryo-2p-yK2" firstAttribute="top" secondItem="aZJ-Ni-zTE" secondAttribute="bottom" constant="124.33333333333331" id="PHL-vu-PDA"/>
                             <constraint firstItem="aZJ-Ni-zTE" firstAttribute="leading" secondItem="iA0-Ld-jGM" secondAttribute="leading" id="URQ-DG-X58"/>
                             <constraint firstItem="iA0-Ld-jGM" firstAttribute="trailing" secondItem="aZJ-Ni-zTE" secondAttribute="trailing" id="W86-Pl-UO6"/>
                             <constraint firstItem="ryo-2p-yK2" firstAttribute="centerX" secondItem="q6j-8S-6nE" secondAttribute="centerX" id="Y4k-4A-MuS"/>
-                            <constraint firstItem="dB6-xV-LDh" firstAttribute="top" secondItem="aZJ-Ni-zTE" secondAttribute="bottom" constant="40.333333333333314" id="dSQ-gz-rKu"/>
                             <constraint firstItem="aZJ-Ni-zTE" firstAttribute="top" secondItem="iA0-Ld-jGM" secondAttribute="top" id="dmI-oJ-vGX"/>
-                            <constraint firstItem="ryo-2p-yK2" firstAttribute="top" secondItem="dB6-xV-LDh" secondAttribute="bottom" constant="53" id="nSE-kj-hSM"/>
                             <constraint firstItem="TK4-MD-RQX" firstAttribute="centerX" secondItem="q6j-8S-6nE" secondAttribute="centerX" id="nml-BR-bbz"/>
-                            <constraint firstItem="dB6-xV-LDh" firstAttribute="centerX" secondItem="q6j-8S-6nE" secondAttribute="centerX" id="vW4-Dq-bBc"/>
                             <constraint firstItem="aZJ-Ni-zTE" firstAttribute="height" secondItem="q6j-8S-6nE" secondAttribute="height" multiplier="0.5" id="zKq-F4-7WU"/>
                             <constraint firstItem="aZJ-Ni-zTE" firstAttribute="width" secondItem="q6j-8S-6nE" secondAttribute="width" id="zNN-NU-Wj3"/>
                         </constraints>
